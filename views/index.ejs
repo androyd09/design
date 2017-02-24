@@ -9,11 +9,14 @@
 </head>
 
 <body>
-    <h1>
-        <%= title %>
-    </h1>
-    <a href="index">index</a>
-
+    <% include partials/header%>
+    <main>
+        <h1>
+            <%= title %>
+        </h1>
+        <a href="index">index</a>
+    </main>
+    <% include partials/footer%>
 </body>
 
 </html>

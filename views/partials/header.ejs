@@ -1,3 +1,44 @@
 <header>
-    <%= title%>
+    <nav>
+        <ul>
+            <li>
+                <a
+                   <% if (page==='home'){%>
+                   class="currentPage" href="#"
+                <% } else {%>
+                   class="" href="/"
+                <%}%>
+                   >
+                    <div>
+                        <p>Home</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a
+                   <% if (page==='gallery'){%>
+                   class="currentPage" href="#"
+                <% } else {%>
+                   class="" /*href="/gallery"*/
+                <%}%>
+                   stv-wip >
+                    <div>
+                        <p>Gallery</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a
+                   <% if (page==='design'){%>
+                   class="currentPage" href="#"
+                <% } else {%>
+                   class="" href="/site"
+                <%}%>
+                   ><div>
+                        <p>Site Design</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>

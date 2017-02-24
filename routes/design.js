@@ -3,9 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index/index', {
+    res.render('design/index', {
         title: 'Index',
-        stylesheet: 'indices'
+        stylesheet: 'indices',
+        page: 'design'
     });
 });
 
