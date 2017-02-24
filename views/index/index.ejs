@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/<%=stylesheet%>.css' />
+</head>
+
+<body>
+    <% include ../partials/header%>
+    <main>
+        <h1>
+            <%= title %>
+        </h1>
+        <p>Welcome to the
+            <%= title %>
+        </p>
+    </main>
+    <% include ../partials/footer%>
+</body>
+
+</html>
