@@ -2,21 +2,21 @@ html {
   height: 100%;
   width: 100%;
   background-color: #fff;
+  font-size: 10px;
 }
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  width: 100%;
+  font: 1.4rem "Lucida Grande", Helvetica, Arial, sans-serif;
   height: 100%;
   min-height: 1100px;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
-  position: absolute;
+  border: none;
 }
 body header {
   position: sticky;
   display: block;
-  top: -10px;
-  height: 60px;
+  top: 0;
+  height: 70px;
   background-color: #0f0;
   margin: 0;
   z-index: 1000;
@@ -25,18 +25,35 @@ body header nav {
   width: 100%;
   padding: 0;
   margin: 0;
+  position: absolute;
+  bottom: 0;
+  border-bottom: solid 10px;
+  border-bottom-color: #f00;
 }
 body header nav ul {
-  width: 100%;
+  width: calc(100% - 20px);
+  margin: 0;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
   list-style-type: none;
 }
 body header nav ul li {
   display: inline-block;
-  width: 90px;
-  margin: 0 5px 0 0;
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body header nav ul li.currentPage {
+  background-color: #f00;
 }
 body header nav ul li a {
+  height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
 }
 body header nav ul li a.currentPage {
   color: #008000;
@@ -48,18 +65,18 @@ body header nav ul li a[stv-wip] {
 body header nav ul li a[stv-wip]:hover {
   color: #000;
 }
-body header nav ul li a div {
-  background-color: #000;
+body header nav ul li a div p {
+  text-align: center;
 }
-body footer {
+footer {
   height: 90px;
   background-color: #bbb;
 }
-body header,
-body footer {
-  width: 99%;
+header,
+footer {
+  width: 100%;
 }
-body main {
+main {
   color: #000;
   width: 70%;
   position: relative;
@@ -68,7 +85,7 @@ body main {
   margin: 0;
   display: inline-block;
 }
-body main {
+main {
   height: 100%;
 }
 a {

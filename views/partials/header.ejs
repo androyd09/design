@@ -1,44 +1,57 @@
 <header>
     <nav>
         <ul>
-            <li>
-                <a
-                   <% if (page==='home'){%>
-                   class="currentPage" href="#"
-                <% } else {%>
-                   class="" href="/"
-                <%}%>
-                   >
+            <% if (page==='home'){%>
+            <li  class="currentPage">
+                <a href="#" >
                     <div>
                         <p>Home</p>
                     </div>
                 </a>
             </li>
-            <li>
-                <a
-                   <% if (page==='gallery'){%>
-                   class="currentPage" href="#"
-                <% } else {%>
-                   class="" /*href="/gallery"*/
-                <%}%>
-                   stv-wip >
+            <% } else {%>
+            <li  class="">
+                <a href="/" >
+                    <div>
+                        <p>Home</p>
+                    </div>
+                </a>
+            </li>
+            <%}%>
+            <% if (page==='gallery'){%>
+            <li  class="currentPage">
+                <a href="#" >
                     <div>
                         <p>Gallery</p>
                     </div>
                 </a>
             </li>
-            <li>
-                <a
-                   <% if (page==='design'){%>
-                   class="currentPage" href="#"
-                <% } else {%>
-                   class="" href="/site"
-                <%}%>
-                   ><div>
-                        <p>Site Design</p>
+            <% } else {%>
+            <li  class="">
+                <a stv-wip href="#" title="work in progress">
+                    <div>
+                        <p>Gallery WIP</p>
                     </div>
                 </a>
             </li>
+            <%}%>
+            <% if (page==='design'){%>
+            <li  class="currentPage">
+                <a href="#" >
+                    <div>
+                        <p>Mockups</p>
+                    </div>
+                </a>
+            </li>
+            <% } else {%>
+            <li  class="">
+                <a href="/site" >
+                    <div>
+                        <p>Mockups</p>
+                    </div>
+                </a>
+            </li>
+            <%}%>
         </ul>
     </nav>
 </header>

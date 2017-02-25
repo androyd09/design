@@ -1,20 +1,44 @@
+color1 = #f00
+color2 = #0f0
+color3 = #00f
+//#018A4A
+//#019425
+//#0C7D07
+//#3B9401
+//#668A01
+
+//#5E528A
+//#585C94
+//#515F7D
+//#587B94
+//#3F6269
+
+//#FFC814
+//#D19111
+//#965D13
+//#AD500E
+//#822B0B
+
+
+
 html
     height 100%
     width 100%
     background-color #fff
+    font-size 10px
+//    width 100%
 body
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-    width 100%
+    font 1.4rem "Lucida Grande", Helvetica, Arial, sans-serif
     height 100%
     min-height 1100px
-    margin 0
+    margin 0 0 0 0 
     padding 0
-    position absolute
+    border none
     header
         position sticky
         display block
-        top -10px
-        height 60px
+        top 0
+        height 70px
         background-color #0f0
         margin 0
         z-index 1000
@@ -22,15 +46,31 @@ body
             width 100%
             padding 0
             margin 0
+            position absolute
+            bottom 0
+            border-bottom solid 10px
+            border-bottom-color color1
             ul
-                width 100%
+                width calc(100% - 20px)
+                margin 0
+                padding 0 10px
+                position absolute
+                bottom 0
                 list-style-type none
                 li
                     display inline-block
-                    width 90px
-                    margin 0 5px 0 0
+                    width 140px
+                    margin 0
+                    padding 0
+                    height 100%
+                    &.currentPage
+                        background-color color1
                     a 
+                        height 100%
                         width 100%
+                        padding 0
+                        margin 0
+                        font-size 2rem
                         &.currentPage
                             color green
                         &[stv-wip]
@@ -39,13 +79,18 @@ body
                             &:hover
                                 color #000
                         div
-                            background-color #000
+                            p
+                                text-align center
+//                            height 100%
+//                            width 100%
+
+                            
     footer
         height 90px
         background-color #BBB
     header
     footer
-        width 99%
+        width 100%
     main
         color #000
         width 70%
