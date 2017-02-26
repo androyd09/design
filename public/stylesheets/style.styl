@@ -1,11 +1,19 @@
-color1 = #f00
-color2 = #0f0
-color3 = #00f
+mainColor1 = #aaa
+mainColor2 = #5E528A
+accentColor1 = #587B94
+accentColor2 = #3F6269
+accentColor3 = #D19111
+accentColor4 = #5E528A
+
+linkColor1 = #ffffff
+linkColor2 = #585C94
+
+bgColor = #fff
 //#018A4A
 //#019425
 //#0C7D07
 //#3B9401
-//#668A01
+//#668A01  92c601
 
 //#5E528A
 //#585C94
@@ -24,7 +32,7 @@ color3 = #00f
 html
     height 100%
     width 100%
-    background-color #fff
+    background-color bgColor
     font-size 10px
 //    width 100%
 body
@@ -38,51 +46,79 @@ body
         position sticky
         display block
         top 0
-        height 70px
-        background-color #0f0
+        height 50px
+        background-color mainColor1
         margin 0
+        padding 10px 0 0 0
         z-index 1000
         nav
             width 100%
+            height calc(100% - 20px)
             padding 0
             margin 0
             position absolute
             bottom 0
             border-bottom solid 10px
-            border-bottom-color color1
+            border-bottom-color accentColor1
             ul
                 width calc(100% - 20px)
+                height 100%
                 margin 0
                 padding 0 10px
                 position absolute
+                display flex
                 bottom 0
                 list-style-type none
                 li
-                    display inline-block
+                    display inline-flex
+                    flex-basis auto
+                    position relative
                     width 140px
                     margin 0
                     padding 0
                     height 100%
+                    border-top-left-radius 15px
+                    border-top-left-radius 15px
+                    background-color accentColor3
+                    &:hover
+                        a
+                            background-color accentColor2
                     &.currentPage
-                        background-color color1
+                        a
+                            background-color accentColor1
+                            color white
+                            border-color 
                     a 
+                        //height calc(100% - 5px)
                         height 100%
-                        width 100%
+                        width calc(100% - 5px)
                         padding 0
                         margin 0
                         font-size 2rem
-                        &.currentPage
-                            color green
-                        &[stv-wip]
-                            text-decoration line-through
-                            color:#000
-                            &:hover
-                                color #000
+                        display inline-block
+                        position absolute
+                        bottom 0
+                        border-left 5px solid accentColor3
+                        //border-top 5px solid accentColor1
+                        border-top-left-radius 15px
+                        color #000
+                        &[stv-wip]:hover
+                            color #000
                         div
+                            display inline-block
+                            position relative
+                            height 100%
+                            width 100%
                             p
+                                display inline-block
+                                position absolute
+                                bottom 0
+                                line-height 2rem
+                                height 20px
                                 text-align center
-//                            height 100%
-//                            width 100%
+                                width 100%
+                                padding 0 0 10px 0
+                                margin 0
 
                             
     footer
@@ -96,7 +132,7 @@ body
         width 70%
         position relative
         wid = @width
-        left calc(50% - (70% / 2))
+        left calc((50% - (70% / 2)))
         padding 0
         margin 0
         display inline-block
@@ -108,5 +144,5 @@ a
     color #7ec13f
     text-decoration none
     &:hover
-        color: #d0efaa
+        color: linkColor1
 //#23aae0 #00B7FF

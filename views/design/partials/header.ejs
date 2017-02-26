@@ -1,0 +1,58 @@
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">
+                    <div>
+                        <p>Main</p>
+                    </div>
+                </a>
+            </li>
+            <%
+            var homeClass ='';
+            var aboutClass ='';
+            var contentClass ='';
+            if (page === 'index'){
+                homeClass = 'currentPage'
+            } else if (page === 'about'){
+                aboutClass = 'currentPage'
+            } else if (page === 'content'){
+                contentClass = 'currentPage'
+            }
+            %>
+            <li class="<%=homeClass%>">
+                <% if (homeClass === 'currentPage'){%>
+                <a href="#">
+                <%} else {%>
+                <a href="index">
+                <%}%>
+                    <div>
+                        <p>Home</p>
+                    </div>
+                </a>
+            </li>
+            <li class="<%=aboutClass%>">
+                <% if (aboutClass === 'currentPage'){%>
+                <a href="#">
+                <%} else {%>
+                <a href="about">
+                <%}%>
+                    <div>
+                        <p>About</p>
+                    </div>
+                </a>
+            </li>
+            <li class="<%=contentClass%>">
+                <% if (contentClass === 'currentPage'){%>
+                <a href="#">
+                <%} else {%>
+                <a href="content">
+                <%}%>
+                    <div>
+                        <p>Content</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
