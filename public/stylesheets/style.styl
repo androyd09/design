@@ -1,4 +1,4 @@
-mainColor1 = #aaa
+mainColor1 = #888
 mainColor2 = #5E528A
 accentColor1 = #587B94
 accentColor2 = #3F6269
@@ -8,7 +8,13 @@ accentColor4 = #5E528A
 linkColor1 = #ffffff
 linkColor2 = #585C94
 
-bgColor = #fff
+bgColor = #AAA
+lightText = #fff
+darkText = #000
+
+footerText = lightText
+mainText = darkText
+//bgColor = #fff
 //#018A4A
 //#019425
 //#0C7D07
@@ -28,17 +34,45 @@ bgColor = #fff
 //#822B0B
 
 
-
+//html tag
 html
     height 100%
     width 100%
     background-color bgColor
-    font-size 10px
+    font 10px "Lucida Grande", Helvetica, Arial, sans-serif
 //    width 100%
+
+//heading tags
+h1
+    font-size 2.5rem
+    border-bottom solid accentColor2 4px
+    border-left solid accentColor2 4px
+    padding-left 8px
+h2
+    font-size 2.3rem
+    border-bottom solid accentColor2 4px
+    padding-left 4px
+h3
+    font-size 2.1rem
+    border-bottom solid accentColor2 4px
+    padding-left 8px
+h4
+    font-size 1.8rem
+    border-bottom solid accentColor1 2px
+    padding-left 12px
+h5
+    font-size 1.6rem
+    border-bottom solid accentColor1 2px
+    padding-left 16px
+h6
+    font-size 1.4rem
+    border-bottom solid accentColor1 2px
+    padding-left 20px
+    
+
 body
-    font 1.4rem "Lucida Grande", Helvetica, Arial, sans-serif
+    font-size 1.4rem
     height 100%
-    min-height 1100px
     margin 0 0 0 0 
     padding 0
     border none
@@ -46,64 +80,74 @@ body
         position sticky
         display block
         top 0
-        height 50px
+        height 70px
         background-color mainColor1
         margin 0
         padding 10px 0 0 0
         z-index 1000
+        border-bottom-color accentColor2
         nav
-            width 100%
-            height calc(100% - 20px)
+            @media (min-width: 1000px)
+                width calc(90% - 16px)
+                left 5%
+            width calc(100% - 16px)
+            height calc(100% - 40px)
             padding 0
             margin 0
             position absolute
             bottom 0
-            border-bottom solid 10px
-            border-bottom-color accentColor1
+            border solid 8px mainColor1
+            background-color mainColor1
+            //left 180px
             ul
-                width calc(100% - 20px)
+                width 100%
                 height 100%
                 margin 0
-                padding 0 10px
+                padding 0
                 position absolute
                 display flex
+                //justify-content left
                 bottom 0
                 list-style-type none
                 li
                     display inline-flex
                     flex-basis auto
                     position relative
-                    width 140px
-                    margin 0
+                    bottom 0
+                    width calc(20% - 8px)
+                    margin 0 0 0 8px
                     padding 0
                     height 100%
-                    border-top-left-radius 15px
-                    border-top-left-radius 15px
-                    background-color accentColor3
+                    &:first-child
+                        margin 0
+                        width 20%
                     &:hover
                         a
-                            background-color accentColor2
+                            background-color accentColor3
+                            //border-left-color accentColor1
                     &.currentPage
                         a
-                            background-color accentColor1
-                            color white
-                            border-color 
-                    a 
-                        //height calc(100% - 5px)
+                            background-color accentColor3
+                            color darkText
+                            cursor default
+                    &.title
+                        a,a:hover
+                            background-color accentColor2
+                            color darkText
+                    a
                         height 100%
-                        width calc(100% - 5px)
+                        width 100%
                         padding 0
                         margin 0
                         font-size 2rem
                         display inline-block
                         position absolute
                         bottom 0
-                        border-left 5px solid accentColor3
-                        //border-top 5px solid accentColor1
-                        border-top-left-radius 15px
-                        color #000
+                        background-color accentColor1
+                        color lightText
                         &[stv-wip]:hover
-                            color #000
+                            cursor not-allowed
+                            background-color accentColor1
                         div
                             display inline-block
                             position relative
@@ -114,31 +158,118 @@ body
                                 position absolute
                                 bottom 0
                                 line-height 2rem
-                                height 20px
+                                height 2rem
                                 text-align center
                                 width 100%
                                 padding 0 0 10px 0
                                 margin 0
 
                             
+        > div
+            display inline-block
+            width 136px
+            height 40px
+            padding 0
+            margin 0
+            
+            
+            font-size 2rem
+            position absolute
+            bottom 0
+            left 30px
+            border 2px solid accentColor2
+            border-bottom-width 0
+            background-color accentColor3
+            color darkText
+            > p
+                display inline-block
+                position absolute
+                bottom 0
+                line-height 2rem
+                height 2rem
+                text-align center
+                width 100%
+                padding 0 0 10px 0
+                margin 0
     footer
-        height 90px
-        background-color #BBB
+        height 140px
+        background-color accentColor1
+        border-top solid accentColor2 10px
+        color footerText
+        > div
+            height calc(50% - 20px)
+            padding 0
+            position relative
+            > table
+                width 60%
+                position relative
+                left calc(20% - 2px)
+                text-align center
+                top 15px
+                tbody
+                    tr
+                        td:nth-child(2)
+                            border-left solid footerText 2px
+                            border-right solid footerText 2px
+        > div:first-child
+            width 800px
+            left calc(50% - 400px)
+            top 0
+        > div:last-child
+            width 100%
+            > p
+                text-align center
+                width 300px
+                position relative
+                left calc(50% - 150px)
     header
     footer
         width 100%
     main
-        color #000
+        color mainText
+        //background-color #BBB;
         width 70%
         position relative
-        wid = @width
-        left calc((50% - (70% / 2)))
+        left calc(50% - (70% / 2))
         padding 0
         margin 0
         display inline-block
-    main
-        height 100%
-
+        article
+            width calc(100% - 30px)
+            padding 15px
+            display flex
+            &:nth-of-type(odd)
+                background-color #f0f
+            &:nth-of-type(even)
+                background-color #0f0
+                figure
+                    order 2
+                    margin 0 0 0 5px
+                div
+                    margin 0 5px 0 0
+                    
+            figure
+                width calc(35% - 15px)
+                margin 0 5px 0 0
+                padding 4px
+                border #000 solid 1px
+                display inline-block
+                position relative
+                img
+                    width calc(100% - 20px)
+                    max-width 
+                    position relative
+                    left 10px
+                    top 10px
+                figcaption
+                    position absolute
+                    bottom 0
+            div
+                width calc(65% - 5px)
+                margin 0 0 0 5px
+                display inline-block
+                h3, p
+                    color inherit
 
 a
     color #7ec13f

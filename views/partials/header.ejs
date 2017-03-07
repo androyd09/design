@@ -1,6 +1,18 @@
 <header>
+<!--
+    <div>
+        <p>SAL Design</p>
+    </div>
+-->
     <nav>
         <ul>
+            <li class="title">
+                <a>
+                    <div>
+                        <p>Light Designs</p>
+                    </div>
+                </a>
+            </li>
             <% if (page==='home'){%>
             <li  class="currentPage">
                 <a href="#" >
@@ -48,6 +60,23 @@
                 <a href="/site" >
                     <div>
                         <p>Mockups</p>
+                    </div>
+                </a>
+            </li>
+            <%}%>
+            <% if (page==='about'){%>
+            <li  class="currentPage">
+                <a href="#" >
+                    <div>
+                        <p>About</p>
+                    </div>
+                </a>
+            </li>
+            <% } else {%>
+            <li  class="">
+                <a href="/about" >
+                    <div>
+                        <p>about</p>
                     </div>
                 </a>
             </li>
