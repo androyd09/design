@@ -1,14 +1,31 @@
-mainColor1 = #888
-mainColor2 = #5E528A
-accentColor1 = #587B94
+mainColor1 = #222
+
+mainColor2 = #444
+
+//blue
+accentColor1 = #11b7b7
+//accentColor1light = #11b7b7
+
+//green
 accentColor2 = #3F6269
+//accentColor1light = #11b7b7
+
+//orange
 accentColor3 = #D19111
+//accentColor1light = #11b7b7
+
+//purple
 accentColor4 = #5E528A
+//accentColor1light = #11b7b7
+
+
+accentPurple = #5E528A
 
 linkColor1 = #ffffff
 linkColor2 = #585C94
 
-bgColor = #AAA
+bgColor = #444
+//#444
 lightText = #fff
 darkText = #000
 
@@ -26,6 +43,7 @@ mainText = darkText
 //#515F7D
 //#587B94
 //#3F6269
+//#11b7b7 accent color 1
 
 //#FFC814
 //#D19111
@@ -33,41 +51,56 @@ mainText = darkText
 //#AD500E
 //#822B0B
 
+// better font
+// darker backgrounds, lighter accents
+
 
 //html tag
 html
     height 100%
     width 100%
-    background-color bgColor
+    background-color mainColor2
     font 10px "Lucida Grande", Helvetica, Arial, sans-serif
 //    width 100%
 
 //heading tags
 h1
     font-size 2.5rem
-    border-bottom solid accentColor2 4px
-    border-left solid accentColor2 4px
-    padding-left 8px
+    //border-radius 0 15px
+    border-bottom solid accentColor1 4px
+    border-left solid rgba(255,255,255,0) 4px
+    padding-left 20px
+    margin-top 0
 h2
     font-size 2.3rem
-    border-bottom solid accentColor2 4px
-    padding-left 4px
+    border-bottom solid accentColor1 4px
+    border-left solid rgba(0,0,0,0) 4px
+    padding-left 18px
+    margin-top 0
 h3
     font-size 2.1rem
-    border-bottom solid accentColor2 4px
-    padding-left 8px
+    border-bottom solid accentColor1 4px
+    border-left solid rgba(0,0,0,0) 4px
+    padding-left 16px
+    margin-top 0
 h4
     font-size 1.8rem
-    border-bottom solid accentColor1 2px
-    padding-left 12px
+    border-bottom solid accentColor1 4px
+    border-left solid rgba(0,0,0,0) 4px
+    padding-left 14px
+    margin-top 0
 h5
     font-size 1.6rem
-    border-bottom solid accentColor1 2px
-    padding-left 16px
+    border-bottom solid accentColor1 4px
+    border-left solid rgba(0,0,0,0) 4px
+    padding-left 14px
+    margin-top 0
 h6
     font-size 1.4rem
-    border-bottom solid accentColor1 2px
-    padding-left 20px
+    border-bottom solid accentColor1 4px
+    border-left solid rgba(0,0,0,0) 4px
+    padding-left 14px
+    margin-top 0
     
 
 body
@@ -80,25 +113,22 @@ body
         position sticky
         display block
         top 0
-        height 70px
+        height 60px
         background-color mainColor1
         margin 0
         padding 10px 0 0 0
         z-index 1000
-        border-bottom-color accentColor2
+        border-bottom solid accentPurple 10px
         nav
             @media (min-width: 1000px)
-                width calc(90% - 16px)
+                width calc(90%)
                 left 5%
-            width calc(100% - 16px)
-            height calc(100% - 40px)
+            width calc(100%)
+            height calc(100% - 30px)
             padding 0
             margin 0
             position absolute
             bottom 0
-            border solid 8px mainColor1
-            background-color mainColor1
-            //left 180px
             ul
                 width 100%
                 height 100%
@@ -106,7 +136,6 @@ body
                 padding 0
                 position absolute
                 display flex
-                //justify-content left
                 bottom 0
                 list-style-type none
                 li
@@ -115,12 +144,9 @@ body
                     position relative
                     bottom 0
                     width calc(20% - 8px)
-                    margin 0 0 0 8px
+                    margin 0 4px
                     padding 0
                     height 100%
-                    &:first-child
-                        margin 0
-                        width 20%
                     &:hover
                         a
                             background-color accentColor3
@@ -145,7 +171,7 @@ body
                         bottom 0
                         background-color accentColor1
                         color lightText
-                        &[stv-wip]:hover
+                        &[wip]:hover
                             cursor not-allowed
                             background-color accentColor1
                         div
@@ -231,7 +257,7 @@ body
         width 70%
         position relative
         left calc(50% - (70% / 2))
-        padding 0
+        padding 30px 0
         margin 0
         display inline-block
         article
