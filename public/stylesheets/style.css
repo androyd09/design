@@ -1,53 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC");
 html {
   height: 100%;
   width: 100%;
   background-color: #444;
-  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 10px 'Alegreya Sans', Helvetica, Arial, sans-serif;
 }
 h1 {
-  font-size: 2.5rem;
-  border-bottom: solid #11b7b7 4px;
-  border-left: solid rgba(255,255,255,0) 4px;
-  padding-left: 20px;
-  margin-top: 0;
+  font-size: 2.8rem;
 }
 h2 {
-  font-size: 2.3rem;
-  border-bottom: solid #11b7b7 4px;
-  border-left: solid rgba(0,0,0,0) 4px;
-  padding-left: 18px;
-  margin-top: 0;
+  font-size: 2.6rem;
 }
 h3 {
-  font-size: 2.1rem;
-  border-bottom: solid #11b7b7 4px;
-  border-left: solid rgba(0,0,0,0) 4px;
-  padding-left: 16px;
-  margin-top: 0;
+  font-size: 2.4rem;
 }
 h4 {
-  font-size: 1.8rem;
-  border-bottom: solid #11b7b7 4px;
-  border-left: solid rgba(0,0,0,0) 4px;
-  padding-left: 14px;
-  margin-top: 0;
+  padding-left: 16px;
 }
 h5 {
-  font-size: 1.6rem;
-  border-bottom: solid #11b7b7 4px;
-  border-left: solid rgba(0,0,0,0) 4px;
   padding-left: 14px;
-  margin-top: 0;
 }
 h6 {
-  font-size: 1.4rem;
-  border-bottom: solid #11b7b7 4px;
-  border-left: solid rgba(0,0,0,0) 4px;
-  padding-left: 14px;
+  padding-left: 12px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Alegreya Sans SC';
+  border-style: solid;
+  border-color: rgba(0,0,0,0);
+  border-bottom-color: #23aae0;
+  border-width: 0;
   margin-top: 0;
 }
+h1,
+h2 {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+h3,
+h4 {
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+}
+h5,
+h6 {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+h1 {
+  padding-left: 26px;
+}
+h2,
+h3 {
+  padding-left: 20px;
+}
+h4,
+h5,
+h6 {
+  font-size: 2.2rem;
+}
 body {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   height: 100%;
   margin: 0 0 0 0;
   padding: 0;
@@ -62,9 +81,9 @@ body header {
   margin: 0;
   padding: 10px 0 0 0;
   z-index: 1000;
-  border-bottom: solid #5e528a 10px;
+  border-bottom: solid #23aae0 10px;
 }
-body header nav {
+body header > nav {
   width: calc(100%);
   height: calc(100% - 30px);
   padding: 0;
@@ -73,12 +92,12 @@ body header nav {
   bottom: 0;
 }
 @media (min-width: 1000px) {
-  body header nav {
+  body header > nav {
     width: calc(90%);
     left: 5%;
   }
 }
-body header nav ul {
+body header > nav > ul {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -87,8 +106,10 @@ body header nav ul {
   display: flex;
   bottom: 0;
   list-style-type: none;
+  font-family: 'Alegreya Sans SC';
+  font-size: 3rem;
 }
-body header nav ul li {
+body header > nav > ul > li {
   display: inline-flex;
   flex-basis: auto;
   position: relative;
@@ -98,47 +119,51 @@ body header nav ul li {
   padding: 0;
   height: 100%;
 }
-body header nav ul li:hover a {
-  background-color: #d19111;
+body header > nav > ul > li:hover a {
+  background-color: #23aae0;
+  color: #fff;
 }
-body header nav ul li.currentPage a {
-  background-color: #d19111;
+body header > nav > ul > li:hover a:active {
+  color: #000;
+}
+body header > nav > ul > li.currentPage a {
+  background-color: #23aae0;
   color: #000;
   cursor: default;
 }
-body header nav ul li.title a,
-body header nav ul li.title a:hover {
-  background-color: #3f6269;
-  color: #000;
+body header > nav > ul > li.title > a,
+body header > nav > ul > li.title > a:hover {
+  background-color: #00658c;
+  color: #fff;
 }
-body header nav ul li a {
+body header > nav > ul > li > a {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: 2rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
-  background-color: #11b7b7;
+  background-color: #00658c;
   color: #fff;
 }
-body header nav ul li a[wip]:hover {
+body header > nav > ul > li > a[wip]:hover {
   cursor: not-allowed;
-  background-color: #11b7b7;
+  background-color: #00658c;
+  color: #fff;
 }
-body header nav ul li a div {
+body header > nav > ul > li > a > div {
   display: inline-block;
   position: relative;
   height: 100%;
   width: 100%;
 }
-body header nav ul li a div p {
+body header > nav > ul > li > a > div > p {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  line-height: 2rem;
-  height: 2rem;
+  line-height: 3rem;
+  height: 2.5rem;
   text-align: center;
   width: 100%;
   padding: 0 0 10px 0;
@@ -154,7 +179,7 @@ body header > div {
   position: absolute;
   bottom: 0;
   left: 30px;
-  border: 2px solid #3f6269;
+  border: 2px solid #00658c;
   border-bottom-width: 0;
   background-color: #d19111;
   color: #000;
@@ -172,8 +197,8 @@ body header > div > p {
 }
 body footer {
   height: 140px;
-  background-color: #11b7b7;
-  border-top: solid #3f6269 10px;
+  background-color: #23aae0;
+  border-top: solid #00658c 10px;
   color: #fff;
 }
 body footer > div {
@@ -182,13 +207,17 @@ body footer > div {
   position: relative;
 }
 body footer > div > table {
-  width: 60%;
+  width: 70%;
   position: relative;
-  left: calc(20% - 2px);
+  left: calc(15% - 2px);
   text-align: center;
   top: 15px;
 }
-body footer > div > table tbody tr td:nth-child(2) {
+body footer > div > table > tbody > tr > td {
+  width: 33%;
+}
+body footer > div > table > tbody > tr > td:nth-child(2) {
+  width: calc(33% - 4px);
   border-left: solid #fff 2px;
   border-right: solid #fff 2px;
 }
@@ -212,57 +241,107 @@ body footer {
 }
 body main {
   color: #000;
-  width: 70%;
+  width: 95%;
   position: relative;
-  left: calc(50% - (70% / 2));
+  left: calc(50% - (95% / 2));
   padding: 30px 0;
   margin: 0;
   display: inline-block;
+  background-color: rgba(0,0,0,0);
 }
-body main article {
-  width: calc(100% - 30px);
-  padding: 15px;
+@media (min-width: 1000px) {
+  body main {
+    width: calc(75% - 40px);
+    padding: 30px 20px;
+    left: calc(50% - (75% / 2));
+    background-color: rgba(255,255,255,0.15);
+  }
+}
+body main > article {
   display: flex;
+  width: calc(100%);
+  padding: 15px 0;
+  margin: 20px 0;
+  border-bottom: solid rgba(255,255,255,0.15) 4px;
 }
-body main article:nth-of-type(odd) {
-  background-color: #f0f;
+@media (min-width: 1000px) {
+  body main > article {
+    width: calc(100%);
+    margin: 20px 0;
+  }
 }
-body main article:nth-of-type(even) {
-  background-color: #0f0;
+body main > article:nth-of-type(odd) h1 {
+  padding-left: 30px;
 }
-body main article:nth-of-type(even) figure {
+body main > article:nth-of-type(odd) h2,
+body main > article:nth-of-type(odd) h3 {
+  padding-left: 24px;
+}
+body main > article:nth-of-type(odd) h4 {
+  padding-left: 20px;
+}
+body main > article:nth-of-type(odd) h5 {
+  padding-left: 18px;
+}
+body main > article:nth-of-type(odd) h6 {
+  padding-left: 16px;
+}
+body main > article:nth-of-type(odd) h1,
+body main > article:nth-of-type(odd) h2,
+body main > article:nth-of-type(odd) h3,
+body main > article:nth-of-type(odd) h4,
+body main > article:nth-of-type(odd) h5,
+body main > article:nth-of-type(odd) h6 {
+  border-left-width: 0;
+  border-right-color: rgba(0,0,0,0);
+  border-right-width: 4px;
+}
+body main > article:nth-of-type(even) > figure {
   order: 2;
   margin: 0 0 0 5px;
 }
-body main article:nth-of-type(even) div {
+body main > article:nth-of-type(even) > figure > img {
+  color: #000;
+}
+body main > article:nth-of-type(even) > div {
   margin: 0 5px 0 0;
 }
-body main article figure {
+body main > article > figure {
+  background-color: rgba(0,0,0,0.1);
   width: calc(35% - 15px);
   margin: 0 5px 0 0;
   padding: 4px;
-  border: #000 solid 1px;
   display: inline-block;
   position: relative;
 }
-body main article figure img {
-  width: calc(100% - 20px);
-max-width
-  position: relative;
-  left: 10px;
-  top: 10px;
+body main > article > figure > div {
+  height: 80%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
 }
-body main article figure figcaption {
+body main > article > figure > div > img {
+  width: 70%;
+}
+body main > article > figure > figcaption {
+  font-family: Aldrich, sans-serif;
+  max-height: calc(20% - 4px);
+  width: calc(100% - 8px);
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
+  background-color: rgba(255,255,255,0.1);
 }
-body main article div {
+body main > article > figure > figcaption > p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+body main > article > div {
   width: calc(65% - 5px);
   margin: 0 0 0 5px;
   display: inline-block;
 }
-body main article div h3,
-body main article div p {
+body main > article > div > h3,
+body main > article > div > p {
   color: inherit;
 }
 a {

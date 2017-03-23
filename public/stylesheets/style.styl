@@ -1,49 +1,80 @@
-mainColor1 = #222
 
-mainColor2 = #444
+////background colors
+
+bkgdHeader = #222
+
+bkgdHTML = #444
+
+bkgdMain = rgba(255,255,255, .15)
+
+
+////accent colors
 
 //blue
-accentColor1 = #11b7b7
-//accentColor1light = #11b7b7
-
-//green
-accentColor2 = #3F6269
-//accentColor1light = #11b7b7
+//lightAccent1 = #11b7b7
+lightAccent1 = #23aae0
+//darkAccent1 = #3F6269
+darkAccent1 = #00658C
+//#
+//#23aae0 #00B7FF
 
 //orange
-accentColor3 = #D19111
-//accentColor1light = #11b7b7
+lightAccent2 = #D19111
+darkAccent2 = #965D13
+
+//green
+lightAccent3 = #92c601
+darkAccent3 = #019425
 
 //purple
-accentColor4 = #5E528A
-//accentColor1light = #11b7b7
+lightAccent4 = #B17ACC
+darkAccent4 = #5E528A
+
+//red
+lightAccent5 = #E03023
+darkAccent5 = #8C0900
+
+//tan
+lightAccent6 = #d2b48c
+darkAccent6 = #965D13
+
+//fff
+lightAccentx = #fff
+darkAccentx = #000
 
 
-accentPurple = #5E528A
+
+noColor = rgba(0,0,0,0)
+
+////text colors
 
 linkColor1 = #ffffff
 linkColor2 = #585C94
 
-bgColor = #444
-//#444
-lightText = #fff
-darkText = #000
 
-footerText = lightText
-mainText = darkText
-//bgColor = #fff
+//#444
+colorLightText = #fff
+colorDarkText = #000
+
+footerText = colorLightText
+colorBodyCopy = colorDarkText
+
+
+
+
+////color codes
 //#018A4A
 //#019425
 //#0C7D07
 //#3B9401
-//#668A01  92c601
+//#668A01  #92c601
 
 //#5E528A
 //#585C94
 //#515F7D
 //#587B94
 //#3F6269
-//#11b7b7 accent color 1
+//#11b7b7
 
 //#FFC814
 //#D19111
@@ -55,56 +86,84 @@ mainText = darkText
 // darker backgrounds, lighter accents
 
 
+
+//@font-face
+//    font-family Aldrich
+//    font-style normal
+//    src url('../fonts/Aldrich/Aldrich-Regular.ttf')
+
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+textFigCaption = Aldrich
+textHeading = 'Alegreya Sans SC'
+textBodyCopy = 'Alegreya Sans'
+
 //html tag
 html
     height 100%
     width 100%
-    background-color mainColor2
-    font 10px "Lucida Grande", Helvetica, Arial, sans-serif
+    background-color bkgdHTML
+    font 10px textBodyCopy, Helvetica, Arial, sans-serif
 //    width 100%
 
 //heading tags
 h1
-    font-size 2.5rem
-    //border-radius 0 15px
-    border-bottom solid accentColor1 4px
-    border-left solid rgba(255,255,255,0) 4px
-    padding-left 20px
-    margin-top 0
+    font-size 2.8rem
 h2
-    font-size 2.3rem
-    border-bottom solid accentColor1 4px
-    border-left solid rgba(0,0,0,0) 4px
-    padding-left 18px
-    margin-top 0
+    font-size 2.6rem
 h3
-    font-size 2.1rem
-    border-bottom solid accentColor1 4px
-    border-left solid rgba(0,0,0,0) 4px
-    padding-left 16px
-    margin-top 0
+    font-size 2.4rem
 h4
-    font-size 1.8rem
-    border-bottom solid accentColor1 4px
-    border-left solid rgba(0,0,0,0) 4px
-    padding-left 14px
-    margin-top 0
+    padding-left 16px
 h5
-    font-size 1.6rem
-    border-bottom solid accentColor1 4px
-    border-left solid rgba(0,0,0,0) 4px
     padding-left 14px
-    margin-top 0
 h6
-    font-size 1.4rem
-    border-bottom solid accentColor1 4px
-    border-left solid rgba(0,0,0,0) 4px
-    padding-left 14px
+    padding-left 12px
+
+h1
+h2
+h3
+h4
+h5
+h6
+    font-family textHeading
+    border-style solid
+    border-color noColor
+    border-bottom-color lightAccent1
+    border-width 0
     margin-top 0
+
+h1
+h2
+    border-bottom-width 4px
+    border-left-width 4px
+
+h3
+h4
+    border-bottom-width 3px
+    border-left-width 3px
+
+h5
+h6
+    border-bottom-width 2px
+    border-left-width 2px
+
+h1
+    padding-left 26px
+h2
+h3
+    padding-left 20px
+
+h4
+h5
+h6
+    font-size 2.2rem
+    
     
 
 body
-    font-size 1.4rem
+    font-size 1.6rem
     height 100%
     margin 0 0 0 0 
     padding 0
@@ -114,12 +173,12 @@ body
         display block
         top 0
         height 60px
-        background-color mainColor1
+        background-color bkgdHeader
         margin 0
         padding 10px 0 0 0
         z-index 1000
-        border-bottom solid accentPurple 10px
-        nav
+        border-bottom solid lightAccent1 10px
+        > nav
             @media (min-width: 1000px)
                 width calc(90%)
                 left 5%
@@ -129,7 +188,7 @@ body
             margin 0
             position absolute
             bottom 0
-            ul
+            > ul
                 width 100%
                 height 100%
                 margin 0
@@ -138,7 +197,9 @@ body
                 display flex
                 bottom 0
                 list-style-type none
-                li
+                font-family textHeading
+                font-size 3rem
+                > li
                     display inline-flex
                     flex-basis auto
                     position relative
@@ -149,42 +210,45 @@ body
                     height 100%
                     &:hover
                         a
-                            background-color accentColor3
-                            //border-left-color accentColor1
+                            background-color lightAccent1
+                            color colorLightText
+                            &:active
+                                color colorDarkText
                     &.currentPage
                         a
-                            background-color accentColor3
-                            color darkText
+                            background-color lightAccent1
+                            color colorDarkText
                             cursor default
                     &.title
-                        a,a:hover
-                            background-color accentColor2
-                            color darkText
-                    a
+                        > a
+                        > a:hover
+                            background-color darkAccent1
+                            color colorLightText
+                    > a
                         height 100%
                         width 100%
                         padding 0
                         margin 0
-                        font-size 2rem
                         display inline-block
                         position absolute
                         bottom 0
-                        background-color accentColor1
-                        color lightText
+                        background-color darkAccent1
+                        color colorLightText
                         &[wip]:hover
                             cursor not-allowed
-                            background-color accentColor1
-                        div
+                            background-color darkAccent1
+                            color colorLightText
+                        > div
                             display inline-block
                             position relative
                             height 100%
                             width 100%
-                            p
+                            > p
                                 display inline-block
                                 position absolute
                                 bottom 0
-                                line-height 2rem
-                                height 2rem
+                                line-height 3rem
+                                height 2.5rem
                                 text-align center
                                 width 100%
                                 padding 0 0 10px 0
@@ -197,16 +261,14 @@ body
             height 40px
             padding 0
             margin 0
-            
-            
             font-size 2rem
             position absolute
             bottom 0
             left 30px
-            border 2px solid accentColor2
+            border 2px solid darkAccent1
             border-bottom-width 0
-            background-color accentColor3
-            color darkText
+            background-color lightAccent2
+            color colorDarkText
             > p
                 display inline-block
                 position absolute
@@ -219,22 +281,25 @@ body
                 margin 0
     footer
         height 140px
-        background-color accentColor1
-        border-top solid accentColor2 10px
+        background-color lightAccent1
+        border-top solid darkAccent1 10px
         color footerText
         > div
             height calc(50% - 20px)
             padding 0
             position relative
             > table
-                width 60%
+                width 70%
                 position relative
-                left calc(20% - 2px)
+                left calc(15% - 2px)
                 text-align center
                 top 15px
-                tbody
-                    tr
-                        td:nth-child(2)
+                > tbody
+                    > tr
+                        > td
+                            width 33%
+                        > td:nth-child(2)
+                            width calc(33% - 4px)
                             border-left solid footerText 2px
                             border-right solid footerText 2px
         > div:first-child
@@ -252,49 +317,92 @@ body
     footer
         width 100%
     main
-        color mainText
-        //background-color #BBB;
-        width 70%
+        color colorBodyCopy
+        width 95%
         position relative
-        left calc(50% - (70% / 2))
+        left calc(50% - (95% / 2))
         padding 30px 0
         margin 0
         display inline-block
-        article
-            width calc(100% - 30px)
-            padding 15px
+        background-color noColor
+        @media (min-width: 1000px)
+            width calc(75% - 40px)
+            padding 30px 20px
+            left calc(50% - (75% / 2))
+            background-color bkgdMain
+        > article
             display flex
+            width calc(100%)
+            padding 15px 0
+            margin 20px 0
+            border-bottom solid bkgdMain 4px
+            @media (min-width: 1000px)
+                width calc(100%)
+                margin 20px 0
             &:nth-of-type(odd)
-                background-color #f0f
+                //background-color lightAccent6
+                h1
+                    padding-left 30px
+                h2
+                h3
+                    padding-left 24px
+                h4
+                    padding-left 20px
+                h5
+                    padding-left 18px
+                h6
+                    padding-left 16px
+                h1
+                h2
+                h3
+                h4
+                h5
+                h6
+                    border-left-width 0
+                    border-right-color noColor
+                    border-right-width 4px
             &:nth-of-type(even)
-                background-color #0f0
-                figure
+                //background-color darkAccent6
+                > figure
                     order 2
                     margin 0 0 0 5px
-                div
+                    > img
+                        color #000
+                > div
                     margin 0 5px 0 0
                     
-            figure
+            > figure
+                background-color rgba(0,0,0,.1);
                 width calc(35% - 15px)
                 margin 0 5px 0 0
                 padding 4px
-                border #000 solid 1px
+                //border #000 solid 1px
                 display inline-block
                 position relative
-                img
-                    width calc(100% - 20px)
-                    max-width 
-                    position relative
-                    left 10px
-                    top 10px
-                figcaption
+                > div
+                    height 80%
+                    width 100%
+                    display inline-flex
+                    justify-content center
+                    > img
+                        width 70%
+                > figcaption
+                    font-family textFigCaption, sans-serif
+                    max-height calc(20% - 4px)
+                    width calc(100% - 8px)
                     position absolute
-                    bottom 0
-            div
+                    bottom 4px
+                    background-color rgba(255,255,255,.1)
+                    > p
+                        font-size 1.2rem
+                        text-align center
+                        
+            > div
                 width calc(65% - 5px)
                 margin 0 0 0 5px
                 display inline-block
-                h3, p
+                > h3
+                > p
                     color inherit
 
 a
@@ -302,4 +410,3 @@ a
     text-decoration none
     &:hover
         color: linkColor1
-//#23aae0 #00B7FF
