@@ -345,9 +345,9 @@ body main > article > div > p {
   color: inherit;
 }
 a {
-  color: #7ec13f;
+  color: #fff;
   text-decoration: none;
 }
 a:hover {
-  color: #fff;
+  color: #585c94;
 }
