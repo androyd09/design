@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET design page. */
 router.get('/', function (req, res, next) {
     res.render('design/index', {
         title: 'Site Design Index',
@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 });
 
 
-
+/* Get greens site */
 router.get('/green', function (req, res, next) {
     res.render('design/green/index', {
         title: 'green',
@@ -44,6 +44,8 @@ router.get('/green/content', function (req, res, next) {
         site:'green'
     });
 });
+// end green site
+
 
 
 
