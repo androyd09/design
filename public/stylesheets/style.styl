@@ -288,24 +288,27 @@ body
             height calc(50% - 20px)
             padding 0
             position relative
-            > table
-                width 70%
-                position relative
-                left calc(15% - 2px)
-                text-align center
-                top 15px
-                > tbody
-                    > tr
-                        > td
-                            width 33%
-                        > td:nth-child(2)
-                            width calc(33% - 4px)
-                            border-left solid footerText 2px
-                            border-right solid footerText 2px
         > div:first-child
             width 800px
             left calc(50% - 400px)
             top 0
+            border-bottom solid #fff 2px
+            > p
+                width calc(50% - 2px)
+                display inline-block
+                margin 0
+                padding 0
+                position absolute
+                text-align center
+                top 15px
+                &:first-child
+                    border-right solid footerText 1px
+                    margin-right 1px
+                    left 0
+                &:last-child
+                    border-left solid footerText 1px
+                    margin-left 1px
+                    right 0
         > div:last-child
             width 100%
             > p

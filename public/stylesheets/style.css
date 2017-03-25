@@ -206,25 +206,30 @@ body footer > div {
   padding: 0;
   position: relative;
 }
-body footer > div > table {
-  width: 70%;
-  position: relative;
-  left: calc(15% - 2px);
-  text-align: center;
-  top: 15px;
-}
-body footer > div > table > tbody > tr > td {
-  width: 33%;
-}
-body footer > div > table > tbody > tr > td:nth-child(2) {
-  width: calc(33% - 4px);
-  border-left: solid #fff 2px;
-  border-right: solid #fff 2px;
-}
 body footer > div:first-child {
   width: 800px;
   left: calc(50% - 400px);
   top: 0;
+  border-bottom: solid #fff 2px;
+}
+body footer > div:first-child > p {
+  width: calc(50% - 2px);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+}
+body footer > div:first-child > p:first-child {
+  border-right: solid #fff 1px;
+  margin-right: 1px;
+  left: 0;
+}
+body footer > div:first-child > p:last-child {
+  border-left: solid #fff 1px;
+  margin-left: 1px;
+  right: 0;
 }
 body footer > div:last-child {
   width: 100%;
