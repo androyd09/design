@@ -1,0 +1,115 @@
+//Colors
+
+bgHeader= green
+bgFooter = blue
+bgMain = red
+
+
+html
+    width 100%
+    height 100%
+    padding 0
+    margin 0
+body
+    width 100%
+    height 100%
+    padding 0
+    /*margin -16px 0 0 0*/
+    display inline-block
+    > header
+        position sticky
+        display block
+        top 0
+        height 60px
+        background-color bgHeader
+        margin 0
+        padding 10px 0 0 0
+        z-index 1000
+        border-bottom solid lightAccent1 10px
+        > nav
+            @media (min-width: 1000px)
+                width calc(90%)
+                left 5%
+            width calc(100%)
+            height calc(100% - 30px)
+            padding 0
+            margin 0
+            position absolute
+            bottom 0
+            > ul
+                width 100%
+                height 100%
+                margin 0
+                padding 0
+                position absolute
+                display flex
+                bottom 0
+                list-style-type none
+                font-family textHeading
+                font-size 3rem
+                > li
+                    display inline-flex
+                    flex-basis auto
+                    position relative
+                    bottom 0
+                    width calc(20% - 8px)
+                    margin 0 4px
+                    padding 0
+                    height 100%
+                    &:hover
+                        a
+                            background-color lightAccent1
+                            color colorLightText
+                            &:active
+                                color colorDarkText
+                    &.currentPage
+                        a
+                            background-color lightAccent1
+                            color colorDarkText
+                            cursor default
+                    &.title
+                        > a
+                        > a:hover
+                            background-color darkAccent1
+                            color colorLightText
+                    > a
+                        height 100%
+                        width 100%
+                        padding 0
+                        margin 0
+                        display inline-block
+                        position absolute
+                        bottom 0
+                        background-color darkAccent1
+                        color colorLightText
+                        &[wip]:hover
+                            cursor not-allowed
+                            background-color darkAccent1
+                            color colorLightText
+                        > div
+                            display inline-block
+                            position relative
+                            height 100%
+                            width 100%
+                            > p
+                                display inline-block
+                                position absolute
+                                bottom 0
+                                line-height 3rem
+                                height 2.5rem
+                                text-align center
+                                width 100%
+                                padding 0 0 10px 0
+                                margin 0
+    > footer
+        width 100%
+        height 130px
+        background-color bgFooter
+        padding 0
+        margin 0
+    > main
+        width 80%
+        min-height calc(100% - 260px)
+        background-color bgMain
+        padding 0
+        margin 0
