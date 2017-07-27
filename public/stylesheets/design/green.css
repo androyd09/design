@@ -3,37 +3,39 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
+  font: 10px Helvetica, Arial, sans-serif;
+  background-color: #797;
 }
 body {
   width: 100%;
   height: 100%;
   padding: 0;
-/*margin -16px 0 0 0*/
+  margin: 0;
   display: inline-block;
 }
 body > header {
   position: sticky;
   display: block;
   top: 0;
-  height: 60px;
-  background-color: #008000;
+  height: 50px;
+  background: linear-gradient(180deg, #6ee225, rgba(119,153,119,0.92) 80%);
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0 0 0 0;
   z-index: 1000;
-  border-bottom: solid lightAccent1 10px;
+  border-top: solid #6ee225 10px;
 }
 body > header > nav {
-  width: calc(100%);
-  height: calc(100% - 30px);
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   body > header > nav {
-    width: calc(90%);
-    left: 5%;
+    width: calc(82%);
+    left: 9%;
   }
 }
 body > header > nav > ul {
@@ -45,7 +47,7 @@ body > header > nav > ul {
   display: flex;
   bottom: 0;
   list-style-type: none;
-  font-family: textHeading;
+  font-family: 'Helvetica';
   font-size: 3rem;
 }
 body > header > nav > ul > li {
@@ -53,27 +55,53 @@ body > header > nav > ul > li {
   flex-basis: auto;
   position: relative;
   bottom: 0;
-  width: calc(20% - 8px);
-  margin: 0 4px;
+  width: calc(23% - 4px);
+  height: calc(100% - 15px);
   padding: 0;
-  height: 100%;
+  margin: 0;
+  background-color: #209d16;
+  border: solid #797 2px;
+  border-top-width: 0;
+  border-bottom-width: 0;
 }
 body > header > nav > ul > li:hover a {
-  background-color: lightAccent1;
-  color: colorLightText;
+  background-color: #6ee225;
+  color: #63ba63;
 }
 body > header > nav > ul > li:hover a:active {
-  color: colorDarkText;
+  color: #63ba63;
 }
-body > header > nav > ul > li.currentPage a {
-  background-color: lightAccent1;
-  color: colorDarkText;
+body > header > nav > ul > li.currentPage,
+body > header > nav > ul > li.currentPage:last-child,
+body > header > nav > ul > li.currentPage:first-child {
+  height: calc(100% - 6px);
+  width: 31%;
+  border-radius: 0;
+  border: 0 solid #209d16;
+  border-bottom-width: 6px;
+  background-color: #6ee225;
+  border-radius: 0;
+}
+body > header > nav > ul > li.currentPage a,
+body > header > nav > ul > li.currentPage:last-child a,
+body > header > nav > ul > li.currentPage:first-child a {
+  color: #209d16;
   cursor: default;
+  width: 100%;
+  height: calc(100% - 6px);
 }
 body > header > nav > ul > li.title > a,
 body > header > nav > ul > li.title > a:hover {
-  background-color: darkAccent1;
-  color: colorLightText;
+  background-color: #209d16;
+  color: #6ee225;
+}
+body > header > nav > ul > li:first-child {
+  width: calc(23% - 2px);
+  border-left-width: 0;
+}
+body > header > nav > ul > li:last-child {
+  width: calc(23% - 2px);
+  border-right-width: 0;
 }
 body > header > nav > ul > li > a {
   height: 100%;
@@ -83,13 +111,12 @@ body > header > nav > ul > li > a {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  background-color: darkAccent1;
-  color: colorLightText;
+  color: #6ee225;
 }
 body > header > nav > ul > li > a[wip]:hover {
   cursor: not-allowed;
-  background-color: darkAccent1;
-  color: colorLightText;
+  background-color: #209d16;
+  color: #6ee225;
 }
 body > header > nav > ul > li > a > div {
   display: inline-block;
@@ -109,16 +136,22 @@ body > header > nav > ul > li > a > div > p {
   margin: 0;
 }
 body > footer {
-  width: 100%;
-  height: 130px;
-  background-color: #00f;
+  width: calc(80% - 8px);
+  height: calc(100px - 4px);
+  background-color: #176400;
   padding: 0;
-  margin: 0;
+  margin: 0 10%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: solid #c6f49f 4px;
+  border-bottom-width: 0;
 }
 body > main {
-  width: 80%;
-  min-height: calc(100% - 260px);
-  background-color: #f00;
-  padding: 0;
-  margin: 0;
+  width: calc(80% - 48px);
+  min-height: calc(100% - 100px);
+  background-color: #c6f49f;
+  padding: 20px 20px;
+  margin: 10px 10%;
+  border-radius: 15px;
+  border: solid #176400 4px;
 }

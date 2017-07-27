@@ -12,30 +12,30 @@ router.get('/', function (req, res, next) {
 
 
 /* Get greens site */
-router.get('/green', function (req, res, next) {
+/*router.get('/green', function (req, res, next) {
     res.render('design/green/index', {
         title: 'green',
         page:'index',
         site:'green'
     });
-});
+});*/
 router.get('/green/index', function (req, res, next) {
     res.render('design/green/index', {
-        title: 'green',
+        title: 'Home',
         page:'index',
         site:'green'
     });
 });
 router.get('/green/about', function (req, res, next) {
     res.render('design/green/about', {
-        title: 'green-about',
+        title: 'About',
         page:'about',
         site:'green'
     });
 });
 router.get('/green/content', function (req, res, next) {
     res.render('design/green/content', {
-        title: 'green-content',
+        title: 'Content',
         page:'content',
         site:'green'
     });

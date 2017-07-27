@@ -1,41 +1,59 @@
 //Colors
 
-bgHeader= green
-bgFooter = blue
-bgMain = red
+bgHtml = #779977
+bgHeader = #63ba63
+bgFooter = #176400
+//bgFooter = #209d16
+bgMain = #c6f49f
+lightAccent1 = #6ee225
+lightAccent2 = #c6f49f
+darkAccent1 = #209d16
+darkAccent2 = #176400
+grayAccent1 = #779977
+colorLightText = #6ee225
+colorDarkText = #209d16
+bgHeaderGradient = linear-gradient(180deg, lightAccent1, rgba(119, 153, 119, .92) 80%)
 
+//@import url('https://fonts.googleapis.com/css?family=Aldrich');
+//@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i');
+//@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+//textFigCaption = Aldrich
+textHeading = 'Helvetica'
+textBodyCopy = 'Arial'
 
 html
     width 100%
     height 100%
     padding 0
     margin 0
+    font 10px Helvetica, Arial, sans-serif
+    background-color bgHtml
 body
     width 100%
     height 100%
     padding 0
-    /*margin -16px 0 0 0*/
+    margin 0
     display inline-block
     > header
         position sticky
         display block
         top 0
-        height 60px
-        background-color bgHeader
+        height 50px
+        background bgHeaderGradient
         margin 0
-        padding 10px 0 0 0
+        padding 0 0 0 0
         z-index 1000
-        border-bottom solid lightAccent1 10px
+        border-top solid lightAccent1 10px
         > nav
-            @media (min-width: 1000px)
-                width calc(90%)
-                left 5%
-            width calc(100%)
-            height calc(100% - 30px)
+            @media (min-width: 1200px)
+                width calc(82%)
+                left 9%
+            width 100%
+            height 100%
             padding 0
             margin 0
             position absolute
-            bottom 0
+            top 0
             > ul
                 width 100%
                 height 100%
@@ -52,26 +70,44 @@ body
                     flex-basis auto
                     position relative
                     bottom 0
-                    width calc(20% - 8px)
-                    margin 0 4px
+                    width calc(23% - 4px)
+                    height calc(100% - 15px)
                     padding 0
-                    height 100%
+                    margin 0
+                    background-color darkAccent1
+                    border solid grayAccent1 2px
+                    border-top-width 0
+                    border-bottom-width 0
                     &:hover
                         a
                             background-color lightAccent1
-                            color colorLightText
+                            color bgHeader
                             &:active
-                                color colorDarkText
-                    &.currentPage
+                                color bgHeader
+                    &.currentPage, &.currentPage:last-child, &.currentPage:first-child
+                        height calc(100% - 6px)
+                        width 31%
+                        border-radius 0
+                        border 0 solid colorDarkText
+                        border-bottom-width 6px
+                        background-color lightAccent1
                         a
-                            background-color lightAccent1
                             color colorDarkText
                             cursor default
+                            width 100%
+                            height calc(100% - 6px)
+                        border-radius 0
                     &.title
                         > a
                         > a:hover
                             background-color darkAccent1
                             color colorLightText
+                    &:first-child
+                        width calc(23% - 2px)
+                        border-left-width 0
+                    &:last-child
+                        width calc(23% - 2px)
+                        border-right-width 0
                     > a
                         height 100%
                         width 100%
@@ -80,7 +116,6 @@ body
                         display inline-block
                         position absolute
                         bottom 0
-                        background-color darkAccent1
                         color colorLightText
                         &[wip]:hover
                             cursor not-allowed
@@ -102,14 +137,27 @@ body
                                 padding 0 0 10px 0
                                 margin 0
     > footer
-        width 100%
-        height 130px
+        width calc(80% - 8px)
+        height calc(100px - 4px)
         background-color bgFooter
         padding 0
-        margin 0
+        margin 0 10%
+        border-top-left-radius 15px
+        border-top-right-radius 15px
+        border solid lightAccent2 4px
+        border-bottom-width 0
     > main
-        width 80%
-        min-height calc(100% - 260px)
+        width calc(80% - 48px)
+        min-height calc(100% - 100px)
         background-color bgMain
-        padding 0
-        margin 0
+        padding 20px 20px
+        margin 10px 10%
+        border-radius 15px
+        border solid darkAccent2 4px
+        
+        
+        
+        
+        
+        
+        
