@@ -17,13 +17,13 @@ h3 {
   font-size: 2.4rem;
 }
 h4 {
-  padding-left: 16px;
+  padding-left: 20px;
 }
 h5 {
-  padding-left: 14px;
+  padding-left: 18px;
 }
 h6 {
-  padding-left: 12px;
+  padding-left: 16px;
 }
 h1,
 h2,
@@ -37,6 +37,7 @@ h6 {
   border-bottom-color: #23aae0;
   border-width: 0;
   margin-top: 0;
+  border-bottom-left-radius: 30px;
 }
 h1,
 h2 {
@@ -56,9 +57,11 @@ h6 {
 h1 {
   padding-left: 26px;
 }
-h2,
+h2 {
+  padding-left: 24px;
+}
 h3 {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 h4,
 h5,
@@ -91,7 +94,7 @@ body header > nav {
   position: absolute;
   bottom: 0;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   body header > nav {
     width: calc(90%);
     left: 5%;
@@ -107,17 +110,33 @@ body header > nav > ul {
   bottom: 0;
   list-style-type: none;
   font-family: 'Alegreya Sans SC';
-  font-size: 3rem;
+  font-size: 2.2rem;
+}
+@media (min-width: 800px) {
+  body header > nav > ul {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1000px) {
+  body header > nav > ul {
+    font-size: 3rem;
+  }
 }
 body header > nav > ul > li {
   display: inline-flex;
   flex-basis: auto;
   position: relative;
   bottom: 0;
-  width: calc(20% - 8px);
-  margin: 0 4px;
+  width: 20%;
+  margin: 0;
   padding: 0;
   height: 100%;
+}
+@media (min-width: 1000px) {
+  body header > nav > ul > li {
+    width: calc(20% - 8px);
+    margin: 0 4px;
+  }
 }
 body header > nav > ul > li:hover a {
   background-color: #23aae0;
@@ -207,10 +226,16 @@ body footer > div {
   position: relative;
 }
 body footer > div:first-child {
-  width: 800px;
-  left: calc(50% - 400px);
+  width: 100%;
+  left: 0;
   top: 0;
   border-bottom: solid #fff 2px;
+}
+@media (min-width: 820px) {
+  body footer > div:first-child {
+    width: 800px;
+    left: calc(50% - 400px);
+  }
 }
 body footer > div:first-child > p {
   width: calc(50% - 2px);
@@ -246,20 +271,27 @@ body footer {
 }
 body main {
   color: #000;
-  width: 95%;
+  width: calc(100% - 40px);
   position: relative;
-  left: calc(50% - (95% / 2));
-  padding: 30px 0;
+  left: 0 /*calc(50% - (95% / 2))*/;
+  padding: 30px 20px;
   margin: 0;
   display: inline-block;
-  background-color: rgba(0,0,0,0);
+/*background-color noColor*/
+  background-color: rgba(255,255,255,0.15);
 }
 @media (min-width: 1000px) {
+  body main {
+    width: calc(90% - 40px);
+    padding: 30px 20px;
+    left: calc(50% - (90% / 2));
+  }
+}
+@media (min-width: 1200px) {
   body main {
     width: calc(75% - 40px);
     padding: 30px 20px;
     left: calc(50% - (75% / 2));
-    background-color: rgba(255,255,255,0.15);
   }
 }
 body main > article {
@@ -275,32 +307,6 @@ body main > article {
     margin: 20px 0;
   }
 }
-body main > article:nth-of-type(odd) h1 {
-  padding-left: 30px;
-}
-body main > article:nth-of-type(odd) h2,
-body main > article:nth-of-type(odd) h3 {
-  padding-left: 24px;
-}
-body main > article:nth-of-type(odd) h4 {
-  padding-left: 20px;
-}
-body main > article:nth-of-type(odd) h5 {
-  padding-left: 18px;
-}
-body main > article:nth-of-type(odd) h6 {
-  padding-left: 16px;
-}
-body main > article:nth-of-type(odd) h1,
-body main > article:nth-of-type(odd) h2,
-body main > article:nth-of-type(odd) h3,
-body main > article:nth-of-type(odd) h4,
-body main > article:nth-of-type(odd) h5,
-body main > article:nth-of-type(odd) h6 {
-  border-left-width: 0;
-  border-right-color: rgba(0,0,0,0);
-  border-right-width: 4px;
-}
 body main > article:nth-of-type(even) > figure {
   order: 2;
   margin: 0 0 0 5px;
@@ -313,32 +319,37 @@ body main > article:nth-of-type(even) > div {
 }
 body main > article > figure {
   background-color: rgba(0,0,0,0.1);
-  width: calc(35% - 15px);
+  width: calc(35% - 5px);
+  height: 200px;
   margin: 0 5px 0 0;
-  padding: 4px;
+/*padding 2px*/
+  border: #000 solid 2px;
   display: inline-block;
   position: relative;
 }
 body main > article > figure > div {
-  height: 80%;
-  max-height: 190px;
+  height: calc(80% - 1px);
   width: 100%;
-  max-width: 470px;
   display: inline-flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  border-bottom: #000 solid 1px;
 }
 body main > article > figure > div > img {
   width: 70%;
 }
 body main > article > figure > figcaption {
   font-family: Aldrich, sans-serif;
-  max-height: calc(20% - 4px);
-  width: calc(100% - 8px);
+  height: calc(20%);
+  width: calc(100%);
   position: absolute;
-  bottom: 4px;
-  background-color: rgba(255,255,255,0.1);
+  bottom: 0;
+  background-color: rgba(255,255,255,0.2);
 }
 body main > article > figure > figcaption > p {
+/*margin 0
+                        padding 0*/
   font-size: 1.2rem;
   text-align: center;
 }
@@ -352,9 +363,10 @@ body main > article > div > p {
   color: inherit;
 }
 a {
-  color: #fff;
+  color: #b17acc;
   text-decoration: none;
 }
 a:hover {
-  color: #585c94;
+  color: #5e528a;
+  background-color: #b17acc;
 }
