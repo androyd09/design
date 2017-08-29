@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/design/<%=site%>.css' />
+</head>
+
+<body>
+    <% include ../partials/header%>
+    <main>
+        <div class="alert">
+            <h1>
+                Back to the <%= title %> Page?
+            </h1>
+            <a href="/" class="button">Yes</a>
+            <a href="./index" class="button">No</a>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

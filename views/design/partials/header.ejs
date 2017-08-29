@@ -1,18 +1,14 @@
 <header>
     <nav>
         <ul>
-            <li>
-                <a href="/">
-                    <div>
-                        <p>Main</p>
-                    </div>
-                </a>
-            </li>
             <%
+            var mainClass ='';
             var homeClass ='';
             var aboutClass ='';
             var contentClass ='';
-            if (page === 'index'){
+            if (page === 'main'){
+                mainClass = 'currentPage';
+            } else if (page === 'index'){
                 homeClass = 'currentPage'
             } else if (page === 'about'){
                 aboutClass = 'currentPage'
@@ -20,6 +16,17 @@
                 contentClass = 'currentPage'
             }
             %>
+            <li class="<%=mainClass%>">
+                <% if (mainClass === 'currentPage'){%>
+                <a href="#">
+                <%} else {%>
+                <a href="./main">
+                <%}%>
+                    <div>
+                        <p>Main</p>
+                    </div>
+                </a>
+            </li>
             <li class="<%=homeClass%>">
                 <% if (homeClass === 'currentPage'){%>
                 <a href="#">

@@ -2,23 +2,23 @@ var express = require('express');
 var router = express.Router();
 
 /* GET design page. */
-router.get('/', function (req, res, next) {
+/*router.get('/', function (req, res, next) {
     res.render('design/index', {
         title: 'Site Design Index',
         stylesheet: 'indices',
         page: 'design'
     });
-});
+});*/
 
 
 /* Get greens site */
-/*router.get('/green', function (req, res, next) {
-    res.render('design/green/index', {
-        title: 'green',
-        page:'index',
+router.get('/green/main', function (req, res, next) {
+    res.render('design/green/main', {
+        title: 'Main',
+        page:'main',
         site:'green'
     });
-});*/
+});
 router.get('/green/index', function (req, res, next) {
     res.render('design/green/index', {
         title: 'Home',

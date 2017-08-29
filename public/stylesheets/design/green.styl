@@ -1,8 +1,10 @@
 //Colors
 
-bgHtml = #779977
+bgHtml = grayAccent1
+//bgHtml = #779977
 bgHeader = #63ba63
-bgFooter = #176400
+bgFooter = darkAccent2
+//bgFooter = #176400
 //bgFooter = #209d16
 bgMain = #c6f49f
 lightAccent1 = #6ee225
@@ -153,11 +155,41 @@ body
         padding 20px 20px
         margin 10px 10%
         border-radius 15px
-        border solid darkAccent2 4px
-        
-        
-        
-        
-        
-        
-        
+        border solid darkAccent2 4px        
+        > div.alert
+            width 360px
+            height 200px
+            padding 20px
+            border darkAccent2 solid 4px
+            position absolute
+            left calc(( 100% - 408px ) / 2)
+            top calc(( 100% - 248px ) / 2)
+            display inline-block
+            background-color rgba(119, 153, 119, .75)
+            border-radius 30px
+            > h1
+                width 100%
+                text-align center
+            > a
+                color lightAccent2
+                &.button
+                    width 132px
+                    height 45px
+                    background-color darkAccent2
+                    display inline-block
+                    text-align center
+                    text-decoration none
+                    font-size 2.4rem
+                    line-height 45px
+                    position absolute
+                    bottom 25px
+                    border lightAccent2 solid 4px
+                    border-radius 15px
+                    &:nth-of-type(odd)
+                        left 30px
+                    &:nth-of-type(even)
+                        right 30px
+
+
+
+

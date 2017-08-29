@@ -155,3 +155,42 @@ body > main {
   border-radius: 15px;
   border: solid #176400 4px;
 }
+body > main > div.alert {
+  width: 360px;
+  height: 200px;
+  padding: 20px;
+  border: #176400 solid 4px;
+  position: absolute;
+  left: calc((100% - 408px) / 2);
+  top: calc((100% - 248px) / 2);
+  display: inline-block;
+  background-color: rgba(119,153,119,0.75);
+  border-radius: 30px;
+}
+body > main > div.alert > h1 {
+  width: 100%;
+  text-align: center;
+}
+body > main > div.alert > a {
+  color: #c6f49f;
+}
+body > main > div.alert > a.button {
+  width: 132px;
+  height: 45px;
+  background-color: #176400;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.4rem;
+  line-height: 45px;
+  position: absolute;
+  bottom: 25px;
+  border: #c6f49f solid 4px;
+  border-radius: 15px;
+}
+body > main > div.alert > a.button:nth-of-type(odd) {
+  left: 30px;
+}
+body > main > div.alert > a.button:nth-of-type(even) {
+  right: 30px;
+}

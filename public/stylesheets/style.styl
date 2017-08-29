@@ -121,17 +121,14 @@ html
 
 //heading tags
 h1
-    font-size 2.8rem
+    font-size 3rem
+    border-color darkAccent1
+    color colorLightText
 h2
-    font-size 2.6rem
+    font-size 2.5rem
+    border-left-color lightAccent1
 h3
-    font-size 2.4rem
-h4
-    padding-left 20px
-h5
-    padding-left 18px
-h6
-    padding-left 16px
+    font-size 2.3rem
 
 h1
 h2
@@ -141,37 +138,42 @@ h5
 h6
     font-family textHeading
     border-style solid
-    border-color noColor
-    border-bottom-color lightAccent1
     border-width 0
     margin-top 0
     border-bottom-left-radius 30px
 
+h2
+h3
+h4
+h5
+h6
+    border-bottom-color lightAccent1
+
 h1
 h2
+    padding-left 22px
     border-bottom-width 4px
     border-left-width 4px
+    border-top-left-radius 30px
 
 h3
 h4
+    padding-left 20px
     border-bottom-width 3px
-    border-left-width 3px
+    border-left-width 0
+    border-left-color lightAccent1
 
 h5
 h6
+    padding-left 18px
     border-bottom-width 2px
-    border-left-width 2px
+    border-left-width 0
+    border-left-color noColor
 
-h1
-    padding-left 26px
-h2
-    padding-left 24px
-h3
-    padding-left 22px
 h4
 h5
 h6
-    font-size 2.2rem
+    font-size 2.1rem
     
     
 
@@ -218,7 +220,7 @@ body
                 font-size 2.2rem
                 > li
                     @media (min-width: 1000px)
-                        width calc(20% - 8px)
+                        width calc(25% - 8px)
                         margin 0 4px
                     display inline-flex
                     flex-basis auto
@@ -360,7 +362,18 @@ body
             width calc(75% - 40px)
             padding 30px 20px
             left calc(50% - (75% / 2))
-        > article
+        > section
+            border #444 solid 4px
+            border-left-width 0
+            border-right-width 0
+            border-left-color noColor
+            border-right-color noColor
+            border-top-right-radius 30px
+            border-bottom-left-radius 30px
+            padding 15px 20px
+            background-color rgba(255,255,255, .1)
+            margin-bottom 20px
+        > article, > section > article
             display flex
             width calc(100%)
             padding 15px 0
@@ -427,3 +440,8 @@ a
     &:hover
         color: darkAccent4
         background-color lightAccent4
+    &.dark
+        color darkAccent4
+        &:hover
+            color: lightAccent4
+            background-color darkAccent4

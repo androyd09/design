@@ -8,22 +8,16 @@ html {
   font: 10px 'Alegreya Sans', Helvetica, Arial, sans-serif;
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  border-color: #00658c;
+  color: #fff;
 }
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
+  border-left-color: #23aae0;
 }
 h3 {
-  font-size: 2.4rem;
-}
-h4 {
-  padding-left: 20px;
-}
-h5 {
-  padding-left: 18px;
-}
-h6 {
-  padding-left: 16px;
+  font-size: 2.3rem;
 }
 h1,
 h2,
@@ -33,40 +27,42 @@ h5,
 h6 {
   font-family: 'Alegreya Sans SC';
   border-style: solid;
-  border-color: rgba(0,0,0,0);
-  border-bottom-color: #23aae0;
   border-width: 0;
   margin-top: 0;
   border-bottom-left-radius: 30px;
 }
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom-color: #23aae0;
+}
 h1,
 h2 {
+  padding-left: 22px;
   border-bottom-width: 4px;
   border-left-width: 4px;
+  border-top-left-radius: 30px;
 }
 h3,
 h4 {
+  padding-left: 20px;
   border-bottom-width: 3px;
-  border-left-width: 3px;
+  border-left-width: 0;
+  border-left-color: #23aae0;
 }
 h5,
 h6 {
+  padding-left: 18px;
   border-bottom-width: 2px;
-  border-left-width: 2px;
-}
-h1 {
-  padding-left: 26px;
-}
-h2 {
-  padding-left: 24px;
-}
-h3 {
-  padding-left: 22px;
+  border-left-width: 0;
+  border-left-color: rgba(0,0,0,0);
 }
 h4,
 h5,
 h6 {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
 }
 body {
   font-size: 1.6rem;
@@ -134,7 +130,7 @@ body header > nav > ul > li {
 }
 @media (min-width: 1000px) {
   body header > nav > ul > li {
-    width: calc(20% - 8px);
+    width: calc(25% - 8px);
     margin: 0 4px;
   }
 }
@@ -294,7 +290,20 @@ body main {
     left: calc(50% - (75% / 2));
   }
 }
-body main > article {
+body main > section {
+  border: #444 solid 4px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-left-color: rgba(0,0,0,0);
+  border-right-color: rgba(0,0,0,0);
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 15px 20px;
+  background-color: rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+body main > article,
+body main > section > article {
   display: flex;
   width: calc(100%);
   padding: 15px 0;
@@ -302,22 +311,27 @@ body main > article {
   border-bottom: solid rgba(255,255,255,0.15) 4px;
 }
 @media (min-width: 1000px) {
-  body main > article {
+  body main > article,
+  body main > section > article {
     width: calc(100%);
     margin: 20px 0;
   }
 }
-body main > article:nth-of-type(even) > figure {
+body main > article:nth-of-type(even) > figure,
+body main > section > article:nth-of-type(even) > figure {
   order: 2;
   margin: 0 0 0 5px;
 }
-body main > article:nth-of-type(even) > figure > img {
+body main > article:nth-of-type(even) > figure > img,
+body main > section > article:nth-of-type(even) > figure > img {
   color: #000;
 }
-body main > article:nth-of-type(even) > div {
+body main > article:nth-of-type(even) > div,
+body main > section > article:nth-of-type(even) > div {
   margin: 0 5px 0 0;
 }
-body main > article > figure {
+body main > article > figure,
+body main > section > article > figure {
   background-color: rgba(0,0,0,0.1);
   width: calc(35% - 5px);
   height: 200px;
@@ -327,7 +341,8 @@ body main > article > figure {
   display: inline-block;
   position: relative;
 }
-body main > article > figure > div {
+body main > article > figure > div,
+body main > section > article > figure > div {
   height: calc(80% - 1px);
   width: 100%;
   display: inline-flex;
@@ -336,10 +351,12 @@ body main > article > figure > div {
   padding: 0;
   border-bottom: #000 solid 1px;
 }
-body main > article > figure > div > img {
+body main > article > figure > div > img,
+body main > section > article > figure > div > img {
   width: 70%;
 }
-body main > article > figure > figcaption {
+body main > article > figure > figcaption,
+body main > section > article > figure > figcaption {
   font-family: Aldrich, sans-serif;
   height: calc(20%);
   width: calc(100%);
@@ -347,19 +364,23 @@ body main > article > figure > figcaption {
   bottom: 0;
   background-color: rgba(255,255,255,0.2);
 }
-body main > article > figure > figcaption > p {
+body main > article > figure > figcaption > p,
+body main > section > article > figure > figcaption > p {
 /*margin 0
                         padding 0*/
   font-size: 1.2rem;
   text-align: center;
 }
-body main > article > div {
+body main > article > div,
+body main > section > article > div {
   width: calc(65% - 5px);
   margin: 0 0 0 5px;
   display: inline-block;
 }
 body main > article > div > h3,
-body main > article > div > p {
+body main > section > article > div > h3,
+body main > article > div > p,
+body main > section > article > div > p {
   color: inherit;
 }
 a {
@@ -369,4 +390,11 @@ a {
 a:hover {
   color: #5e528a;
   background-color: #b17acc;
+}
+a.dark {
+  color: #5e528a;
+}
+a.dark:hover {
+  color: #b17acc;
+  background-color: #5e528a;
 }
