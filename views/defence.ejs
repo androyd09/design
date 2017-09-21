@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Activity Generator</title>
+    <meta charset="utf-8">
+    <link href="/stylesheets/defence.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>USSD Test Application</h1>
+        <h3>Activity Timer</h3>
+    </header>
+    <main>
+        <div class="container" name="display">
+            <span>Current Activity:</span><span name="activityNumber"></span>
+            <span>Time Remaining:</span><span name="timeLeft"></span>
+        </div>
+        <div class="container" name="timer">
+            <h3>Timer Settings</h3>
+            <label>Minutes</label>
+            <input type="number" name="delayMin" min="0" step="1" value="1">
+            <label>Seconds</label>
+            <input type="number" name="delaySec" min="0" step="1" value="0">
+            <button name="startTimer">start</button>
+            <button name="stopTimer" disabled>stop</button>
+            <label>repeat</label><input type="checkbox" name="isRepeat">
+        </div>
+        <div class="container" name="activity">
+            <h3>Activity Settings</h3>
+<!--            <button name="random">random</button>-->
+            <!--
+                <label>
+                    Max <input type="number" name="maximum" min="1">
+                </label>
+-->
+            <label>Maximum</label>
+            <input type="number" name="maximum" min="1" step="1" value="1"><br/><br/>
+            <label>Minimum</label>
+            <input type="number" name="minimum" min="1" step="1" value="1">
+            <label>enable Text-To-Speech</label><input type="checkbox" name="isSpeech">
+<!--
+            <select name="1minimum">
+                <option value="1">1 repetition</option>
+                <option value="5">5 repetitions</option>
+                <option value="10">10 repetitions</option>
+                <option value="15">15 repetitions</option>
+                <option value="20">20 repetitions</option>
+            </select>
+-->
+<!--            <button name="speech">speech</button>-->
+            <!--               
+                <label>
+Min <input type="number" name="inputMin" min="1">
+
+                </label>
+-->
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="/javascripts/defence.js"></script>
+<!--<script src="TTS.js"></script>-->
+<!--<script src="ranNum.js"></script>-->
+<!--<script src="timer.js"></script>-->
+</html>

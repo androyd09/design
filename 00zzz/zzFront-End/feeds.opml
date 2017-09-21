@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<opml version="2.0">
+    
+    <head>
+        <title>My feedly feeds</title>
+    </head>
+    
+    <body>
+        <outline text="Learning">
+            <outline text="The Blog of Author Tim Ferriss" htmlUrl="http://www.fourhourworkweek.com/blog" type="rss" xmlUrl="http://feeds.feedburner.com/timferriss?format=xml" />
+            <outline text="TEDTalks (video)" htmlUrl="http://www.ted.com/talks/list" type="rss" xmlUrl="http://feeds.feedburner.com/tedtalks_video" />
+            <outline text="Scott H Young" htmlUrl="http://www.scotthyoung.com/blog" type="rss" xmlUrl="http://feeds.feedburner.com/scotthyoung/HAHx" /></outline>
+        <outline text="Ruby">
+            <outline text="Ruby News" htmlUrl="http://www.ruby-lang.org/en/feeds/news.rss" type="rss" xmlUrl="http://www.ruby-lang.org/en/feeds/news.rss" />
+            <outline text="O'Reilly Media: Ruby and Rails" htmlUrl="http://oreilly.com/ruby" type="rss" xmlUrl="http://www.oreillynet.com/ruby/blog/atom.xml" /></outline>
+        <outline text="Ruby-Rails">
+            <outline text="PluginAWeek" htmlUrl="http://www.pluginaweek.org" type="rss" xmlUrl="http://www.pluginaweek.org/feed/" />
+            <outline text="Gluttonous" htmlUrl="http://glu.ttono.us/" type="rss" xmlUrl="http://feeds.feedburner.com/Gluttonous" />
+            <outline text="A Single Programmer's Blog" htmlUrl="http://blog.teksol.info/" type="rss" xmlUrl="http://blog.teksol.info/xml/atom/feed.xml" /></outline>
+        <outline text="Usability">
+            <outline text="UIE Brain Sparks" htmlUrl="http://www.uie.com/brainsparks" type="rss" xmlUrl="http://www.uie.com/brainsparks/feed/" />
+            <outline text="UXpod - User Experience Podcast" htmlUrl="http://www.uxpod.com" type="rss" xmlUrl="http://uxpod.libsyn.com/rss" />
+            <outline text="Demystifying Usability" htmlUrl="http://www.demystifyingusability.com/" type="rss" xmlUrl="http://experiencedynamics.blogs.com/site_search_usability/atom.xml" />
+            <outline text="UsabilityNews: News (full)" type="rss" xmlUrl="http://www.usabilitynews.com/rss/NewsFull.aspx" />
+            <outline text="Usability In The News" type="rss" xmlUrl="http://feeds.usernomics.com/NewsErgonomicsUserInterfaceDesignComputerHumanInteractionhci" />
+            <outline text="Alertbox: Jakob Nielsen's Column on Web Usability" type="rss" xmlUrl="http://bootleg-rss.g-blog.net/useit_com_alertbox.php" />
+            <outline text="WebWord" type="rss" xmlUrl="http://www.webword.com/feed/" />
+            <outline text="justaddwater.dk" htmlUrl="http://justaddwater.dk" type="rss" xmlUrl="http://feeds.justaddwater.dk/jaw/posts" /></outline>
+        <outline text="UX">
+            <outline text="interactions magazine, issue XVII.6" type="rss" xmlUrl="http://interactions.acm.org/rss.php" />
+            <outline text="UX Magazine" htmlUrl="http://uxmag.com/rss.xml" type="rss" xmlUrl="http://feeds.feedburner.com/UXM" />
+            <outline text="zakiwarfel.com" type="rss" xmlUrl="http://toddwarfel.com/feed/" />
+            <outline text="O Danny Boy" htmlUrl="http://www.odannyboy.com/blog/" type="rss" xmlUrl="http://www.odannyboy.com/blog/index2.rdf" />
+            <outline text="UXmatters" htmlUrl="http://www.uxmatters.com/" type="rss" xmlUrl="http://www.uxmatters.com/index.xml" /></outline>
+        <outline text="Web Design">
+            <outline text="A List Apart" htmlUrl="http://alistapart.com" type="rss" xmlUrl="http://www.alistapart.com/rss.xml" />
+            <outline text="Smashing Magazine Feed" htmlUrl="http://www.smashingmagazine.com" type="rss" xmlUrl="http://feeds.feedburner.com/SmashingMagazine" />
+            <outline text="SimpleBits" htmlUrl="http://simplebits.com" type="rss" xmlUrl="http://www.simplebits.com/xml/rss.xml" />
+            <outline text="Six Revisions" htmlUrl="http://sixrevisions.com" type="rss" xmlUrl="http://feeds.feedburner.com/SixRevisions?format=xml" />
+            <outline text="Digital Web News Feed" htmlUrl="http://www.digital-web.com/" type="rss" xmlUrl="http://www.digital-web.com/news/rss/" />
+            <outline text="CSS-Tricks" htmlUrl="http://css-tricks.com" type="rss" xmlUrl="http://feeds.feedburner.com/CssTricks?format=xml" />
+            <outline text="Web Designer Wall - Design Trends and Tutorials" htmlUrl="http://webdesignerwall.com" type="rss" xmlUrl="http://feeds.feedburner.com/WebDesignerWall?format=xml" />
+            <outline text="Dezignus.com" htmlUrl="http://dezignus.com" type="rss" xmlUrl="http://dezignus.com/feed/" />
+            <outline text="CSS Beauty News Feed" htmlUrl="http://www.cssbeauty.com/" type="rss" xmlUrl="http://www.cssbeauty.com/rss/news/" />
+            <outline text="Web Design from Scratch" htmlUrl="http://www.webdesignfromscratch.com" type="rss" xmlUrl="http://webdesignfromscratch.com/rss.xml" />
+            <outline text="BittBox" htmlUrl="http://www.bittbox.com" type="rss" xmlUrl="http://feeds.feedburner.com/Bittbox?format=xml" /></outline>
+        <outline text="Web Development">
+            <outline text="planet.jquery.com" htmlUrl="http://planet.jquery.com" type="rss" xmlUrl="http://planet.jquery.com/atom.xml" />
+            <outline text="SitePoint Forums - Featured Threads" type="rss" xmlUrl="http://www.sitepoint.com/forums/featured.rdf" /></outline>
+    </body>
+</opml>

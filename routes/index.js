@@ -17,4 +17,9 @@ router.get('/about', function (req, res, next) {
     });
 });
 
+/*Get timer test*/
+router.get('/selfdefence', function(req,res,next) {
+    res.render('defence',{});
+});
+
 module.exports = router;
