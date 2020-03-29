@@ -11,8 +11,10 @@ bgMain = clearWhite15
 
 //blue
 //lightAccent1 = #11b7b7
-lightAccent1 = #23aae0
+//lightAccent1 = #23aae0
+lightAccent1 = var(--blue)
 //darkAccent1 = #3F6269
+//darkAccent1 = #00658C
 darkAccent1 = #00658C
 //#
 //#23aae0 #00B7FF
@@ -194,68 +196,54 @@ body
         z-index 1000
         border-bottom solid lightAccent1 10px
         > nav
-            @media (min-width: 1200px)
-                width calc(90%)
-                left 5%
-            width calc(100%)
-            height calc(100% - 30px)
+            height calc(100%)
             padding 0
             margin 0
             position absolute
             bottom 0
+            > span.nav-logo
+                font-size 2rem !important
             > ul
-                @media (min-width: 800px)
-                    font-size 2.4rem
-                @media (min-width: 1000px)
-                    font-size 3rem
-                width 100%
                 height 100%
                 margin 0
                 padding 0
                 position absolute
-                display flex
                 bottom 0
                 list-style-type none
                 font-family textHeading
                 font-size 2.2rem
                 > li
-                    @media (min-width: 1000px)
-                        width calc(25% - 8px)
-                        margin 0 4px
-                    display inline-flex
-                    flex-basis auto
-                    position relative
+                    //position relative
                     bottom 0
-                    width 20%
                     margin 0
                     padding 0
                     height 100%
                     &:hover
                         a
-                            background-color lightAccent1
-                            color colorLightText
+                            //background-color lightAccent1
+                            //color colorLightText
                             &:active
-                                color colorDarkText
-                    &.currentPage
+                                //color colorDarkText
+                    &.active
                         a
-                            background-color lightAccent1
-                            color colorDarkText
-                            cursor default
+                            //background-color lightAccent1
+                            //color colorDarkText
+                            cursor default !important
                     &.title
                         > a
                         > a:hover
-                            background-color darkAccent1
-                            color colorLightText
+                            //background-color darkAccent1
+                            //color colorLightText
                     > a
                         height 100%
-                        width 100%
+                        //width 100%
                         padding 0
                         margin 0
                         display inline-block
                         position absolute
                         bottom 0
-                        background-color darkAccent1
-                        color colorLightText
+                        //background-color darkAccent1
+                        //color colorLightText
                         &[wip]:hover
                             cursor not-allowed
                             background-color darkAccent1
@@ -435,13 +423,13 @@ body
                     color inherit
 
 a
-    color lightAccent4
+    //color lightAccent4
     text-decoration none
     &:hover
-        color: darkAccent4
-        background-color lightAccent4
+        //color: darkAccent4
+        //background-color lightAccent4
     &.dark
         color darkAccent4
         &:hover
-            color: lightAccent4
-            background-color darkAccent4
+            //color: lightAccent4
+            //background-color darkAccent4

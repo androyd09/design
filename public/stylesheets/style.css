@@ -14,7 +14,7 @@ h1 {
 }
 h2 {
   font-size: 2.5rem;
-  border-left-color: #23aae0;
+  border-left-color: var(--blue);
 }
 h3 {
   font-size: 2.3rem;
@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  border-bottom-color: #23aae0;
+  border-bottom-color: var(--blue);
 }
 h1,
 h2 {
@@ -50,7 +50,7 @@ h4 {
   padding-left: 20px;
   border-bottom-width: 3px;
   border-left-width: 0;
-  border-left-color: #23aae0;
+  border-left-color: var(--blue);
 }
 h5,
 h6 {
@@ -80,87 +80,44 @@ body header {
   margin: 0;
   padding: 10px 0 0 0;
   z-index: 1000;
-  border-bottom: solid #23aae0 10px;
+  border-bottom: solid var(--blue) 10px;
 }
 body header > nav {
-  width: calc(100%);
-  height: calc(100% - 30px);
+  height: calc(100%);
   padding: 0;
   margin: 0;
   position: absolute;
   bottom: 0;
 }
-@media (min-width: 1200px) {
-  body header > nav {
-    width: calc(90%);
-    left: 5%;
-  }
+body header > nav > span.nav-logo {
+  font-size: 2rem !important;
 }
 body header > nav > ul {
-  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   position: absolute;
-  display: flex;
   bottom: 0;
   list-style-type: none;
   font-family: 'Alegreya Sans SC';
   font-size: 2.2rem;
 }
-@media (min-width: 800px) {
-  body header > nav > ul {
-    font-size: 2.4rem;
-  }
-}
-@media (min-width: 1000px) {
-  body header > nav > ul {
-    font-size: 3rem;
-  }
-}
 body header > nav > ul > li {
-  display: inline-flex;
-  flex-basis: auto;
-  position: relative;
   bottom: 0;
-  width: 20%;
   margin: 0;
   padding: 0;
   height: 100%;
 }
-@media (min-width: 1000px) {
-  body header > nav > ul > li {
-    width: calc(25% - 8px);
-    margin: 0 4px;
-  }
-}
-body header > nav > ul > li:hover a {
-  background-color: #23aae0;
-  color: #fff;
-}
-body header > nav > ul > li:hover a:active {
-  color: #000;
-}
-body header > nav > ul > li.currentPage a {
-  background-color: #23aae0;
-  color: #000;
-  cursor: default;
-}
-body header > nav > ul > li.title > a,
-body header > nav > ul > li.title > a:hover {
-  background-color: #00658c;
-  color: #fff;
+body header > nav > ul > li.active a {
+  cursor: default !important;
 }
 body header > nav > ul > li > a {
   height: 100%;
-  width: 100%;
   padding: 0;
   margin: 0;
   display: inline-block;
   position: absolute;
   bottom: 0;
-  background-color: #00658c;
-  color: #fff;
 }
 body header > nav > ul > li > a[wip]:hover {
   cursor: not-allowed;
@@ -212,7 +169,7 @@ body header > div > p {
 }
 body footer {
   height: 140px;
-  background-color: #23aae0;
+  background-color: var(--blue);
   border-top: solid #00658c 10px;
   color: #fff;
 }
@@ -384,17 +341,8 @@ body main > section > article > div > p {
   color: inherit;
 }
 a {
-  color: #b17acc;
   text-decoration: none;
-}
-a:hover {
-  color: #5e528a;
-  background-color: #b17acc;
 }
 a.dark {
   color: #5e528a;
-}
-a.dark:hover {
-  color: #b17acc;
-  background-color: #5e528a;
 }
