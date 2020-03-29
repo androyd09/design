@@ -1,61 +1,45 @@
 <header>
-    <nav>
-        <ul>
-            <li class="title">
-                <a>
-                    <div>
-                        <p>S.Light Design</p>
-                    </div>
-                </a>
-            </li>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<span class="navbar-brand nav-logo col-4 col-lg-2">
+			S.Light Design
+		</span>
+        <ul class="navbar-nav col-9 col-lg-10">
             <% if (page==='home'){%>
-            <li  class="currentPage" title="Home Page">
-                <a>
-                    <div>
-                        <p>Home</p>
-                    </div>
+            <li  class="nav-item active col-4 col-lg-2" title="Home Page">
+                <a class="nav-link" href="#">
+					Home<span class="sr-only">(current)</span>
                 </a>
             </li>
             <% } else {%>
-            <li  class="" title="Home Page">
-                <a href="/" >
-                    <div>
-                        <p>Home</p>
-                    </div>
+            <li  class="nav-item col-4 col-lg-2" title="Home Page">
+                <a class="nav-link" href="/" >
+					Home
                 </a>
             </li>
             <%}%>
             <% if (page==='gallery'){%>
-            <li  class="currentPage" title="Project Gallery">
-                <a>
-                    <div>
-                        <p>Project Gallery</p>
-                    </div>
+            <li  class="nav-item active col-4 col-lg-2" title="Project Gallery">
+                <a class="nav-link" >
+					Project Gallery<span class="sr-only">(current)</span>
                 </a>
             </li>
             <% } else {%>
-            <li  class="">
-                <a href="/gallery" title="Project Gallery">
-                    <div>
-                        <p>Project Gallery</p>
-                    </div>
+            <li  class="nav-item col-4 col-lg-2">
+                <a class="nav-link" href="/gallery" title="Project Gallery">
+					Project Gallery
                 </a>
             </li>
             <%}%>
             <% if (page==='about'){%>
-            <li  class="currentPage" title="About us">
+            <li  class="nav-item active col-4 col-lg-2" title="About us">
                 <a>
-                    <div>
-                        <p>About</p>
-                    </div>
+					About<span class="sr-only">(current)</span>
                 </a>
             </li>
             <% } else {%>
-            <li  class="">
+            <li  class="nav-item col-4 col-lg-2">
                 <a href="/about" title="About us">
-                    <div>
-                        <p>About</p>
-                    </div>
+					About
                 </a>
             </li>
             <%}%>
