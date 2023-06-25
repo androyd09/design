@@ -16,6 +16,6 @@
     "express": "^4.17.3",
     "morgan": "^1.10.0",
     "serve-favicon": "^2.5.0",
-    "stylus": "^0.54.7"
+    "stylus": "^0.59.0"
   }
 }
